@@ -1,4 +1,16 @@
-.App {
+.content {
+  /*border: 1px dashed red;*/
+}
+
+.row {
+  /*border: 1px dashed green;*/
+}
+
+.show-grid {
+  /*border: 1px dashed black;*/
+}
+
+/*.App {
   text-align: center;
 }
 
@@ -21,4 +33,6 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}*/
+
+

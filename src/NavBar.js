@@ -2,12 +2,21 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 class NavBar extends Component {
+
   render() {
+
+    const styles = {
+      marginBottom: '0'
+      // backgroundColor: 'black',
+      // borderWidth: '20px',
+      // borderColor: 'black'
+    };
+
     return (
-      <Navbar collapseOnSelect>
+      <Navbar style={styles} collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">Samuel H. Sternberg</a>
+            <a href="#">SSSL</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -15,7 +24,7 @@ class NavBar extends Component {
           <Nav>
             <NavItem eventKey={1} href="#">About</NavItem>
             <NavItem eventKey={2} href="#">Publications</NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown eventKey={3} title="Favorite Sexual Positions" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>
               <MenuItem eventKey={3.2}>Another action</MenuItem>
               <MenuItem eventKey={3.3}>Something else here</MenuItem>
