@@ -15,14 +15,12 @@ class NavBar extends Component {
     return (
       <Navbar style={styles} collapseOnSelect>
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#">SSSL</a>
-          </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">About</NavItem>
+            <NavItem onClick={this.props.goToHome}>Home</NavItem>
+            <NavItem onClick={this.props.goToAbout}>About</NavItem>
             <NavItem eventKey={2} href="#">Publications</NavItem>
             <NavDropdown eventKey={3} title="Favorite Sexual Positions" id="basic-nav-dropdown">
               <MenuItem eventKey={3.1}>Action</MenuItem>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Jumbo from './Jumbo';
 import NavBar from './NavBar';
 import HomeContent from './HomeContent';
+import AboutContent from './AboutContent';
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,17 @@ class App extends Component {
     this.state = {
       currentPage: 'home'
     };
+
+    this.handleHomeClick = this.handleHomeClick.bind(this);
+    this.handleAboutClick = this.handleAboutClick.bind(this);
+  }
+
+  handleHomeClick() {
+    this.setState({currentPage: 'home'});
+  }
+
+  handleAboutClick() {
+    this.setState({currentPage: 'about'});
   }
 
   render() {
@@ -21,18 +33,21 @@ class App extends Component {
   //     borderColor: 'red'
   //   }
   // };
+  const currentPage = this.state.currentPage;
 
     return (
       <div className="App">
-        <NavBar />
+        <NavBar goToHome={this.handleHomeClick} goToAbout={this.handleAboutClick}/>
         <Jumbo />
 
-        {this.state.currentPage === 'home' ?
-
-        <HomeContent /> :
-        null
-
-        }
+        {currentPage === 'home' ? (
+          <HomeContent />
+        ) :
+        currentPage === 'about' ? (
+          <AboutContent />
+        ) : (
+          null
+        )}
       </div>
     );
   }
