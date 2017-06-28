@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar goToHome={this.handleHomeClick} goToAbout={this.handleAboutClick}/>
-        <Jumbo />
+        <Jumbo currentPage={currentPage}/>
 
         {currentPage === 'home' ? (
           <HomeContent />

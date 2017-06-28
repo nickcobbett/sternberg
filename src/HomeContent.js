@@ -13,8 +13,11 @@ class HomeContent extends Component {
         textAlign: 'center'
       },
       thumbnail: {
-        maxWidth: '100%',
-        maxHeight: '100%'
+        width: '100%',
+        height: '0',
+        paddingBottom: '100%'
+        // maxWidth: '100%',
+        // maxHeight: '100%'
       }
     }
 
@@ -31,13 +34,13 @@ class HomeContent extends Component {
 
           </Col>
           <Col style={styles.label} sm={4} md={4}>
-            <Thumbnail alt="171x180" rounded src={"https://cdn.notonthehighstreet.com/system/product_images/images/002/055/115/original_glass-science-beaker.jpg"} />
+            <Thumbnail style={styles.thumbnail} alt="171x180" rounded src={"https://cdn.notonthehighstreet.com/system/product_images/images/002/055/115/original_glass-science-beaker.jpg"} />
             <h3>Quality Instruments</h3>
             <p>Look at this fucking beaker</p>
           </Col>
 
           <Col style={styles.label} sm={4} md={4}>
-            <Thumbnail alt="171x180" rounded src={"http://www.thinkgeek.com/images/products/zoom/rubix_cube.jpg"} />
+            <Thumbnail style={styles.thumbnail} alt="171x180" rounded src={"http://www.thinkgeek.com/images/products/zoom/rubix_cube.jpg"} />
             <h3>Fancy Algorithms</h3>
             <p>2 + 2 = 5</p>
           </Col>
